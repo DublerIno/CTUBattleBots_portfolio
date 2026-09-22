@@ -8,8 +8,8 @@ import { PageTransitionProvider } from "@/components/page-transition";
 
 export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
-  const matTheme = pathname.startsWith("/education")
-    ? "mat-theme-education"
+  const matTheme = pathname.startsWith("/events")
+    ? "mat-theme-events"
     : pathname.startsWith("/team")
       ? "mat-theme-team"
       : "mat-theme-competitive";
@@ -19,7 +19,7 @@ export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>)
       <PageTransitionProvider>
         <CuttingMat />
         <a className="skip-link" href="#main-content">
-          Skip to content
+          Přejít k obsahu
         </a>
         <Navigation />
         <div className="page-layer">{children}</div>

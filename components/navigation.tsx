@@ -7,7 +7,7 @@ import { TransitionLink } from "@/components/page-transition";
 
 const items = [
   { href: "/", label: "COMPETITIVE" },
-  { href: "/education", label: "EDUCATION KIT" },
+  { href: "/events", label: "EVENTS" },
   { href: "/team", label: "TEAM" },
 ];
 
@@ -65,7 +65,7 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="site-nav site-nav-desktop" aria-label="Primary navigation">
+      <nav className="site-nav site-nav-desktop" aria-label="Hlavní navigace">
         <div className="desktop-nav-unit">
           <div className="nav-list">
             <NavigationItems />
@@ -77,7 +77,7 @@ export function Navigation() {
         </a>
       </nav>
 
-      <nav className={`site-nav site-nav-mobile${open ? " is-open" : ""}`} aria-label="Primary navigation">
+      <nav className={`site-nav site-nav-mobile${open ? " is-open" : ""}`} aria-label="Hlavní navigace">
         <div className="mobile-nav-bar">
           <CtuLogo />
           <button

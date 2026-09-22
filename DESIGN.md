@@ -4,7 +4,7 @@
 
 The website is a digital engineering workbench.
 
-Every page exists on top of a route-specific cutting mat: blue for Competitive, green for Education Kit and red for Team.
+Every page exists on top of a route-specific cutting mat: blue for Competitive, green for Events and red for Team.
 
 Robots, text, measurements and navigation should feel like objects, labels and documentation placed onto that work surface.
 
@@ -41,7 +41,7 @@ Primary environment:
 ROUTE-SPECIFIC CUTTING MAT
 
 * Competitive: blue
-* Education Kit: green
+* Events: green
 * Team: red
 
 Approximate feeling:
@@ -174,7 +174,7 @@ It should feel like a small control attached to the cutting mat rather than a no
 Content:
 
 COMPETITIVE
-EDUCATION KIT
+EVENTS
 TEAM
 
 plus:
@@ -220,7 +220,7 @@ Avoid springy movement unless there is a very specific reason.
 Switching between:
 
 Competitive
-Education Kit
+Events
 Team
 
 should feel designed.
@@ -482,23 +482,21 @@ If prerendered Blender frame sequences or videos are provided later, they may be
 
 ---
 
-# Education Kit
+# Events
 
-For now:
+Use an open editorial schedule rather than event cards:
 
 large page title
 
-EDUCATION KIT
+EVENTS
 
-small secondary text
+short Czech introduction
 
-ANTWEIGHT PLATFORM
+NOC VĚDY — 25. 9. 2026
 
-DETAILS COMING SOON
+MAKER FAIRE BRNO — 17.–18. 10. 2026
 
-Optionally include an intentionally empty object area where future kit imagery could appear.
-
-Do not design the final page yet.
+Keep the green cutting mat and the shared technical-line language.
 
 ---
 
@@ -643,4 +641,4 @@ When a transparent robot render is available, place it directly over the cutting
 
 The navigation uses the supplied CTU lion mark as a white local SVG. Keep it centered and visually secondary on desktop, left-aligned within the mobile navigation label, and preserve the source/license record in `ASSET_ATTRIBUTION.md`.
 
-Route color is part of the cutting-mat system: Competitive uses deep desaturated blue, Education Kit uses deep desaturated engineering green, and Team uses deep workshop red. Only the mat/panel material color changes; grid density, typography, warm-white ink, navigation geometry and motion language stay shared.
+Route color is part of the cutting-mat system: Competitive uses deep desaturated blue, Events uses deep desaturated engineering green, and Team uses deep workshop red. Only the mat/panel material color changes; grid density, typography, warm-white ink, navigation geometry and motion language stay shared.

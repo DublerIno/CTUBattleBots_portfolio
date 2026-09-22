@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CompetitiveHero } from "@/components/competitive-hero";
+import { CompetitiveIntro } from "@/components/competitive-intro";
 import { RobotSection } from "@/components/robot-section";
 import { robots } from "@/lib/robots";
 
@@ -11,6 +12,7 @@ export default function CompetitivePage() {
   return (
     <main id="main-content">
       <CompetitiveHero />
+      <CompetitiveIntro />
       <div className="robot-sequence">
         {robots.map((robot, index) => (
           <RobotSection key={robot.slug} robot={robot} index={index} />

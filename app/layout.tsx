@@ -4,14 +4,14 @@ import { SiteShell } from "@/components/site-shell";
 import "./globals.css";
 
 const display = Big_Shoulders({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-display",
   display: "swap",
   adjustFontFallback: false,
 });
 
 const technical = IBM_Plex_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-technical",
   weight: ["400", "500", "600"],
   display: "swap",
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     default: "CTU BattleBots",
     template: "%s — CTU BattleBots",
   },
-  description: "Competitive robotics and engineering at CTU in Prague.",
+  description: "Bojoví roboti a studentské inženýrství na Fakultě elektrotechnické ČVUT v Praze.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${display.variable} ${technical.variable}`}>
+    <html lang="cs" data-scroll-behavior="smooth" className={`${display.variable} ${technical.variable}`}>
       <body>
         <SiteShell>{children}</SiteShell>
       </body>

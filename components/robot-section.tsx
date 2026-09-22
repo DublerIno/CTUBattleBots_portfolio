@@ -26,7 +26,7 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
           ease: "power3.out",
           scrollTrigger: { trigger: section, start: "top 68%", once: true },
         });
-        gsap.from("[data-robot=specs] .spec-row, [data-robot=description]", {
+        gsap.from("[data-robot=specs] .spec-row, [data-robot=description] > *, [data-robot=details] > *", {
           opacity: 0,
           y: 18,
           stagger: 0.07,
@@ -68,6 +68,7 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
     >
       <div className="robot-stage">
         <div className="robot-info">
+          <p className="robot-classification">{robot.classification} MELTY BRAIN</p>
           <div className="robot-name-clip">
             <h2 id={`${robot.slug}-title`} className="robot-name" data-robot="name">
               <span>MELTY /</span>
@@ -75,9 +76,11 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
             </h2>
           </div>
           <TechnicalSpec specs={robot.specs} />
-          <p className="robot-description" data-robot="description">
-            {robot.description}
-          </p>
+          <div className="robot-description" data-robot="description">
+            {robot.description.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </div>
 
         <div className="robot-render" data-robot="render">
@@ -96,7 +99,7 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
                 sizes="(max-width: 960px) calc(100vw - 2.3rem), 63vw"
               />
             ) : (
-              <span className="render-label">ROBOT RENDER PLACEHOLDER</span>
+              <span className="render-label">FOTOGRAFIE / RENDER BUDE DOPLNĚN</span>
             )}
             <i className="registration registration-top" />
             <i className="registration registration-right" />
@@ -105,10 +108,23 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
           </div>
           <div className="render-meta" aria-hidden="true">
             <span>UNIT&nbsp;&nbsp;/&nbsp;&nbsp;{robot.unit}</span>
-            <span>REV&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;{robot.revision}</span>
+            <span>CLASS&nbsp;/&nbsp;&nbsp;{robot.classification}</span>
           </div>
         </div>
       </div>
+      {robot.details ? (
+        <div className="robot-details" data-robot="details">
+          <div className="robot-details-heading">
+            <p>{robot.details.title}</p>
+            <span>UNIT / {robot.unit}</span>
+          </div>
+          <div className="robot-details-copy">
+            {robot.details.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

@@ -11,7 +11,7 @@ It should feel artistic, experimental, mechanical and modern rather than like a 
 # Main goals
 
 1. Showcase our competitive BattleBots.
-2. Present our educational Antweight robot kit.
+2. Present public events where visitors can try Antweight robots.
 3. Introduce the team.
 4. Create a memorable visual identity for the team.
 5. Keep the website simple enough to maintain as students.
@@ -86,7 +86,7 @@ Do not activate Three.js, React Three Fiber or WebGL-oriented skills.
 The main navigation contains only:
 
 * Competitive
-* Education Kit
+* Events
 * Team
 
 Additionally show:
@@ -109,7 +109,7 @@ The default landing page is Competitive.
 Preferred route structure:
 
 * `/` → Competitive
-* `/education` → Education Kit
+* `/events` → Events
 * `/team` → Team
 
 The homepage `/` must therefore open directly into the Competitive experience.
@@ -154,7 +154,7 @@ The menu must remain usable with keyboard navigation and touch devices.
 Every page uses a route-specific CUTTING MAT as its visual foundation:
 
 * Competitive uses blue
-* Education Kit uses green
+* Events uses green
 * Team uses red
 
 The cutting mat should make the website feel like the robots and components are physically placed on an engineering workbench. Keep every route color dark, desaturated and physical.
@@ -359,9 +359,9 @@ Placeholder.
 
 ---
 
-# Education page
+# Events page
 
-Do not fully design the educational kit content yet.
+Present the public events where visitors can try small Antweight robots.
 
 For now create only a visually intentional placeholder page.
 
@@ -375,11 +375,11 @@ It should use the same:
 
 Show something similar to:
 
-EDUCATION KIT
+EVENTS
 
-ANTWEIGHT PLATFORM
+NOC VĚDY
 
-DETAILS COMING SOON
+MAKER FAIRE BRNO
 
 Do not invent specifications or features.
 
