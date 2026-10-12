@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
-import melty01TestRender from "@/inspo/testimage.webp";
+
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export type RobotSpec = {
   label: string;
@@ -17,8 +18,10 @@ export type Robot = {
     paragraphs: string[];
   };
   image: {
-    src: StaticImageData | null;
+    src: StaticImageData | string | null;
+    animationSrc?: string;
     alt: string;
+    animationAlt?: string;
   };
   specs: RobotSpec[];
 };
@@ -43,8 +46,10 @@ export const robots: Robot[] = [
       ],
     },
     image: {
-      src: melty01TestRender,
-      alt: "Pohled shora na bojového robota MELTY / 01 s kruhovým šasi a odkrytou elektronikou.",
+      src: `${assetBasePath}/melty-01-assembled.webp`,
+      animationSrc: `${assetBasePath}/melty-01-disassembly.webp`,
+      alt: "Sestavený render bojového robota MELTY / 01.",
+      animationAlt: "Animovaný rozložený pohled na šasi, řídicí jednotku, baterii a horní kryt robota MELTY / 01.",
     },
     specs: [
       { label: "HMOTNOST", value: "148 g" },

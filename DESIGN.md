@@ -464,7 +464,7 @@ Animations should feel choreographed.
 
 # Image animation
 
-Robot images are static renders/photos for now.
+The supplied MELTY / 01 disassembly render plays once when its specimen enters the viewport. Its assembled frame stays visible beforehand and for reduced-motion users. Preserve the transparent background so the robot sits directly on the cutting mat.
 
 Create depth using subtle 2D motion such as:
 
@@ -478,7 +478,7 @@ Create depth using subtle 2D motion such as:
 
 Do not fake full 3D rotation.
 
-If prerendered Blender frame sequences or videos are provided later, they may be integrated separately.
+The team showcase video occupies the existing media frame at its native 16:9 ratio and uses native playback controls. Future video revisions can replace the file without changing the layout.
 
 ---
 

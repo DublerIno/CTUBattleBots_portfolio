@@ -1,4 +1,6 @@
 export function CompetitiveIntro() {
+  const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section className="competitive-intro" aria-label="O projektu CTU BattleBots">
       <div className="competitive-intro-copy">
@@ -13,8 +15,18 @@ export function CompetitiveIntro() {
           zároveň jako zbraň.
         </p>
       </div>
-      <div className="competitive-video" role="img" aria-label="Prostor pro připravované video týmu a robota">
-        <span>VIDEO / 01</span>
+      <div className="competitive-video">
+        <video
+          controls
+          playsInline
+          preload="none"
+          poster={`${assetBasePath}/melty-showcase-poster.webp`}
+          aria-label="Ukázkové video týmu CTU BattleBots a robota MELTY / 01"
+        >
+          <source src={`${assetBasePath}/melty-showcase.mp4`} type="video/mp4" />
+          Váš prohlížeč nepodporuje přehrávání videa.
+        </video>
+        <span className="competitive-video-label" aria-hidden="true">VIDEO / 01</span>
         <i className="registration registration-top" aria-hidden="true" />
         <i className="registration registration-bottom" aria-hidden="true" />
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TechnicalSpec } from "@/components/technical-spec";
@@ -11,6 +11,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function RobotSection({ robot, index }: { robot: Robot; index: number }) {
   const sectionRef = useRef<HTMLElement>(null);
+  const renderRef = useRef<HTMLDivElement>(null);
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const [animationFailed, setAnimationFailed] = useState(false);
+
+  useEffect(() => {
+    const render = renderRef.current;
+    if (!render || !robot.image.animationSrc || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let startTimer: number | undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if ((entries[0]?.intersectionRatio ?? 0) >= 0.45) {
+          startTimer ??= window.setTimeout(() => {
+            setAnimationStarted(true);
+            observer.disconnect();
+          }, 700);
+        } else if (startTimer !== undefined) {
+          window.clearTimeout(startTimer);
+          startTimer = undefined;
+        }
+      },
+      { threshold: 0.45 },
+    );
+    observer.observe(render);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(startTimer);
+    };
+  }, [robot.image.animationSrc]);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -83,9 +114,9 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
           </div>
         </div>
 
-        <div className="robot-render" data-robot="render">
+        <div ref={renderRef} className="robot-render" data-robot="render">
           <div
-            className={`robot-render-inner${robot.image.src ? " has-image" : ""}`}
+            className={`robot-render-inner${robot.image.src ? " has-image" : ""}${robot.image.animationSrc ? " has-animation" : ""}`}
             data-robot="render-inner"
             role={robot.image.src ? undefined : "img"}
             aria-label={robot.image.src ? undefined : robot.image.alt}
@@ -93,13 +124,16 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
             {robot.image.src ? (
               <Image
                 className="robot-image"
-                src={robot.image.src}
-                alt={robot.image.alt}
+                src={animationStarted && !animationFailed ? robot.image.animationSrc ?? robot.image.src : robot.image.src}
+                alt={animationStarted && !animationFailed ? robot.image.animationAlt ?? robot.image.alt : robot.image.alt}
                 fill
                 sizes="(max-width: 960px) calc(100vw - 2.3rem), 63vw"
+                loading={robot.image.animationSrc ? "eager" : "lazy"}
+                unoptimized={Boolean(robot.image.animationSrc)}
+                onError={() => setAnimationFailed(true)}
               />
             ) : (
-              <span className="render-label">FOTOGRAFIE / RENDER BUDE DOPLNĚN</span>
+              <span className="render-label render-label-tba">TBA</span>
             )}
             <i className="registration registration-top" />
             <i className="registration registration-right" />
