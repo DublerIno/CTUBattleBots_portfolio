@@ -15,7 +15,7 @@ export default function EventsPage() {
       <section className="events-page" aria-labelledby="events-title">
         <div className="events-copy">
           <p className="section-label">
-            <span>EVENTS</span>
+            <span>AKCE</span>
             <i aria-hidden="true" />
           </p>
           <h1 id="events-title">EVENTS</h1>

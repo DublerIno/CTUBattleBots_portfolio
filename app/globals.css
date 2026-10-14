@@ -45,7 +45,7 @@ body {
   background: var(--mat-base);
 }
 
-.mat-theme-competitive {
+.mat-theme-battlebots {
   --mat-base: #071b29;
   --mat-deep: #04131e;
   --mat-bloom: rgba(37, 75, 95, 0.24);
@@ -210,6 +210,13 @@ a {
   width: min(18.75rem, calc(100vw - 3rem));
   font: 500 0.73rem/1 var(--font-technical-family);
   letter-spacing: 0.035em;
+  transition: transform 260ms ease, opacity 260ms ease;
+}
+
+.site-nav.is-hidden {
+  transform: translateY(calc(-100% - 5rem));
+  opacity: 0;
+  pointer-events: none;
 }
 
 .desktop-nav-unit {
@@ -308,19 +315,6 @@ a {
   height: auto;
 }
 
-.nav-email {
-  display: inline-block;
-  margin-top: 0.65rem;
-  color: var(--ink-muted);
-  transition: color 180ms ease, transform 180ms ease;
-}
-
-.nav-email:hover,
-.nav-email:focus-visible {
-  transform: translateX(3px);
-  color: var(--ink-bright);
-}
-
 .site-nav-mobile {
   display: none;
 }
@@ -394,7 +388,7 @@ a {
 .intro-title {
   display: grid;
   overflow: hidden;
-  font: 800 clamp(4rem, 10vw, 10rem)/0.76 var(--font-display-family);
+  font: 800 clamp(3.4rem, 9.2vw, 9rem)/0.76 var(--font-display-family);
   letter-spacing: -0.035em;
   text-transform: uppercase;
 }
@@ -411,44 +405,39 @@ a {
   background: linear-gradient(90deg, transparent, rgba(229, 239, 238, 0.15), transparent);
 }
 
-.competitive-hero {
+.battlebots-hero {
   position: relative;
   display: grid;
   min-height: 100svh;
-  place-items: center;
-  padding: 10rem var(--page-gutter) 5rem;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3.2vw, 3.5rem);
+  padding: clamp(14rem, 22vh, 18rem) clamp(3.5rem, 5.5vw, 6rem) 6rem;
 }
 
-.hero-copy {
-  width: min(88rem, 100%);
-  text-align: center;
+.battlebots-hero-copy {
+  min-width: 0;
+  z-index: 1;
 }
 
-.hero-title {
-  display: grid;
+.battlebots-title {
+  white-space: nowrap;
   margin: 0;
   color: var(--ink);
-  font: 800 clamp(6rem, 15.2vw, 14rem)/0.72 var(--font-display-family);
+  font: 800 clamp(5.25rem, 8vw, 8.5rem)/0.82 var(--font-display-family);
   letter-spacing: -0.045em;
   text-transform: uppercase;
   text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.16);
 }
 
-.hero-title > span {
-  display: block;
+.battlebots-title > span {
+  display: inline;
 }
 
-.hero-ctu {
-  font-size: 0.68em;
-  line-height: 1;
-}
-
-.hero-meta {
-  display: grid;
-  gap: 0.55rem;
-  margin-top: 2.15rem;
-  font: 500 clamp(0.65rem, 1.35vw, 1.15rem)/1.3 var(--font-technical-family);
-  letter-spacing: 0.24em;
+.battlebots-lead {
+  max-width: 39rem;
+  margin: 2.25rem 0 0;
+  font: 500 clamp(0.82rem, 1.18vw, 1.08rem)/1.58 var(--font-technical-family);
 }
 
 .scroll-cue {
@@ -478,30 +467,6 @@ a {
   letter-spacing: 0.22em;
 }
 
-.competitive-intro {
-  position: relative;
-  display: grid;
-  min-height: 100svh;
-  grid-template-columns: minmax(26rem, 0.92fr) minmax(30rem, 1.08fr);
-  align-items: center;
-  gap: clamp(3rem, 7vw, 8rem);
-  padding: clamp(13.5rem, 23vh, 16rem) var(--page-gutter) clamp(7rem, 12vh, 10rem);
-}
-
-.competitive-intro::before {
-  position: absolute;
-  top: 4.8rem;
-  right: var(--page-gutter);
-  left: var(--page-gutter);
-  border-top: 1px solid var(--rule-soft);
-  content: "";
-}
-
-.competitive-intro-copy {
-  max-width: 48rem;
-}
-
-.competitive-intro-index,
 .robot-classification {
   margin: 0 0 1.8rem;
   color: var(--ink-muted);
@@ -509,22 +474,7 @@ a {
   letter-spacing: 0.16em;
 }
 
-.competitive-intro-lead {
-  margin: 0;
-  font: 700 clamp(2.7rem, 4.6vw, 5.25rem)/0.96 var(--font-display-family);
-  letter-spacing: -0.025em;
-}
-
-.competitive-intro-body {
-  max-width: 42rem;
-  margin: 2.2rem 0 0;
-  padding-left: 1.4rem;
-  border-left: 1px solid var(--rule);
-  color: var(--ink-muted);
-  font: 500 clamp(0.72rem, 0.92vw, 0.94rem)/1.75 var(--font-technical-family);
-}
-
-.competitive-video {
+.battlebots-video {
   position: relative;
   display: grid;
   width: 100%;
@@ -534,14 +484,14 @@ a {
   background: var(--mat-deep);
 }
 
-.competitive-video video {
+.battlebots-video video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.competitive-video-label {
+.battlebots-video-label {
   position: absolute;
   top: 0.85rem;
   left: 0.85rem;
@@ -981,6 +931,14 @@ a {
   grid-area: heading;
 }
 
+.team-heading h1 {
+  font-size: clamp(5rem, 8vw, 8.5rem);
+}
+
+.team-heading h1 > span {
+  display: block;
+}
+
 .team-location {
   display: flex;
   align-items: center;
@@ -1136,33 +1094,19 @@ a {
     padding-inline: 1rem;
   }
 
-  .mobile-nav-panel .nav-email {
-    min-height: 3.75rem;
-    margin: 0;
-    padding: 1.35rem 1rem;
-    border-top: 1px solid rgba(238, 232, 220, 0.35);
-  }
-
-  .competitive-hero {
-    padding-top: 8rem;
-  }
-
-  .hero-title {
-    font-size: clamp(5rem, 18vw, 9rem);
-  }
-
-  .competitive-intro {
+  .battlebots-hero {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
     padding-top: 10rem;
+    padding-bottom: 7rem;
   }
 
-  .competitive-intro-copy {
-    max-width: 52rem;
+  .battlebots-title {
+    font-size: clamp(5rem, 12.5vw, 8rem);
   }
 
-  .competitive-video {
-    width: min(100%, 48rem);
+  .battlebots-video {
+    width: min(100%, 46rem);
     justify-self: end;
   }
 
@@ -1260,35 +1204,35 @@ a {
     --page-gutter: 1.15rem;
   }
 
+  .intro-title {
+    font-size: clamp(2.7rem, 13.7vw, 3.4rem);
+  }
+
   .mat-light {
     display: none;
   }
 
-  .competitive-hero {
+  .battlebots-hero {
     min-height: 100svh;
-    place-items: center start;
-    padding: 8rem 1.1rem 5rem;
+    align-content: center;
+    gap: clamp(1.35rem, 3vh, 2rem);
+    padding: 7.5rem var(--page-gutter) 3.2rem;
   }
 
-  .hero-copy {
-    text-align: left;
+  .battlebots-title {
+    white-space: normal;
+    font-size: clamp(4.3rem, 20vw, 5.5rem);
+    line-height: 0.8;
   }
 
-  .hero-title {
-    font-size: clamp(4.45rem, 20.2vw, 5.5rem);
-    line-height: 0.78;
+  .battlebots-title > span {
+    display: block;
   }
 
-  .hero-ctu {
-    font-size: 1em;
-    line-height: 0.86;
-  }
-
-  .hero-meta {
-    gap: 0.4rem;
-    margin-top: 1.6rem;
-    font-size: 0.69rem;
-    letter-spacing: 0.16em;
+  .battlebots-lead {
+    margin-top: 1.45rem;
+    font-size: 0.83rem;
+    line-height: 1.5;
   }
 
   .scroll-cue {
@@ -1307,28 +1251,11 @@ a {
     background-size: auto;
   }
 
-  .competitive-intro {
-    min-height: auto;
-    gap: 3.5rem;
-    padding: 8rem var(--page-gutter) 6rem;
-  }
-
-  .competitive-intro::before {
-    top: 4.5rem;
-  }
-
-  .competitive-intro-lead {
-    font-size: clamp(2.7rem, 12vw, 3.5rem);
-    line-height: 0.98;
-  }
-
-  .competitive-intro-body {
-    margin-top: 1.7rem;
-    font-size: 0.75rem;
-  }
-
-  .competitive-video {
-    aspect-ratio: 16 / 9;
+  .battlebots-video-label {
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.45rem 0.55rem;
+    font-size: 0.57rem;
   }
 
   .robot-section {
@@ -1427,6 +1354,10 @@ a {
   .team-heading h1 {
     font-size: clamp(5rem, 22.5vw, 6.7rem);
     overflow-wrap: normal;
+  }
+
+  .team-heading h1 {
+    font-size: clamp(3.85rem, 20vw, 6rem);
   }
 
   .section-label {

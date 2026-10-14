@@ -12,7 +12,7 @@ export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>)
     ? "mat-theme-events"
     : pathname.startsWith("/team")
       ? "mat-theme-team"
-      : "mat-theme-competitive";
+      : "mat-theme-battlebots";
 
   return (
     <div className={`site-shell ${matTheme}`}>

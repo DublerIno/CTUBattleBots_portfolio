@@ -10,7 +10,7 @@ It should feel artistic, experimental, mechanical and modern rather than like a 
 
 # Main goals
 
-1. Showcase our competitive BattleBots.
+1. Showcase our BattleBots.
 2. Present public events where visitors can try Antweight robots.
 3. Introduce the team.
 4. Create a memorable visual identity for the team.
@@ -85,14 +85,11 @@ Do not activate Three.js, React Three Fiber or WebGL-oriented skills.
 
 The main navigation contains only:
 
-* Competitive
+* Battlebots
 * Events
 * Team
 
-Additionally show:
-
-* [sponeond@fel.cvut.cz](mailto:sponeond@fel.cvut.cz)
-* CTU logo
+Additionally show the CTU logo. Do not show the email address in navigation; an Instagram link may replace it later when supplied.
 
 The CTU logo asset will be provided later in both black and white versions.
 
@@ -104,21 +101,21 @@ Use a simple placeholder until the real asset is added.
 
 # Routes
 
-The default landing page is Competitive.
+The default landing page is Battlebots.
 
 Preferred route structure:
 
-* `/` → Competitive
+* `/` → Battlebots
 * `/events` → Events
 * `/team` → Team
 
-The homepage `/` must therefore open directly into the Competitive experience.
+The homepage `/` must therefore open directly into the Battlebots experience.
 
 ---
 
 # Navigation
 
-Navigation should be a small persistent interface positioned around the upper-left corner.
+Navigation should be a small interface positioned around the upper-left corner. It hides during sustained downward scrolling and returns when scrolling up, near the top, or when keyboard-focused or open on mobile.
 
 It is inspired by minimalist creative portfolio navigation such as seventyfour.work.
 
@@ -153,7 +150,7 @@ The menu must remain usable with keyboard navigation and touch devices.
 
 Every page uses a route-specific CUTTING MAT as its visual foundation:
 
-* Competitive uses blue
+* Battlebots uses blue
 * Events uses green
 * Team uses red
 
@@ -254,17 +251,17 @@ Specifications should visually resemble engineering annotations, equipment label
 
 ---
 
-# Competitive page
+# Battlebots page
 
-The Competitive page is currently the most important page.
+The Battlebots page is currently the most important page.
 
 It consists of:
 
-1. Intro / landing scene
-2. Competitive opening hero
+1. Brief Overengineered load intro
+2. One opening viewport with Overengineered, the Czech team introduction, and the showcase video
 3. MELTY / 01
 4. MELTY / 02
-5. End of competitive section
+5. End of Battlebots section
 
 The page should feel like a continuous visual sequence as the user scrolls.
 
@@ -276,7 +273,7 @@ Each robot receives its own large section.
 
 # Robot sections
 
-Each competitive robot section should contain:
+Each Battlebots robot section should contain:
 
 * robot identifier
 * robot name
@@ -293,69 +290,23 @@ No thumbnails.
 
 One strong image is enough.
 
-Robot imagery will be supplied later.
-
-Until then, create clearly intentional image placeholders with the correct proportions.
-
-The placeholder must not contain fake AI-generated robots.
+Use the supplied transparent renders. Never add fake AI-generated robots.
 
 ---
 
 # Initial robots
 
-Create two placeholder robots.
+Keep the two existing robot specimens and their structured technical data.
 
 ## MELTY / 01
 
-Temporary information:
-
-Name:
-MELTY / 01
-
-Class:
-Antweight
-
-MCU:
-ESP32-C3
-
-Battery:
-7.4 V
-
-Other specifications:
-TBD
-
-Description:
-Placeholder copy only. Real engineering text will be supplied later.
-
-Image:
-Placeholder.
+Antweight specimen with a supplied transparent disassembly animation that plays once in view.
 
 ---
 
 ## MELTY / 02
 
-Temporary information:
-
-Name:
-MELTY / 02
-
-Class:
-Beetleweight
-
-MCU:
-TBD
-
-Battery:
-TBD
-
-Other specifications:
-TBD
-
-Description:
-Placeholder copy only. Real engineering text will be supplied later.
-
-Image:
-Placeholder.
+Beetleweight specimen with a supplied transparent rotation animation that plays once in view.
 
 ---
 
@@ -387,20 +338,16 @@ Do not invent specifications or features.
 
 # Team page
 
-Do not fully design the Team page yet.
+Keep the existing visually intentional Team page and its concise recruitment copy.
 
-Create a visually intentional placeholder using the same design system.
-
-Example content:
+Heading:
 
 TEAM
 
-CTU BATTLEBOTS
-PRAGUE
+OVERENGINEERED
+CTU PRAGUE
 
-TEAM PAGE COMING SOON
-
-Do not invent team members.
+Do not invent team members or photographs.
 
 ---
 
@@ -444,13 +391,15 @@ Avoid decorative animation that has no relationship to the content.
 
 Create a short intro animation when the website is initially loaded.
 
-The intro should be approximately 1.5–2.5 seconds in feeling.
+The intro should be approximately 2.4–2.7 seconds in feeling.
 
 It should establish the visual identity without delaying the user unnecessarily.
 
 Possible sequence:
 
-CTU BATTLEBOTS
+OVERENGINEERED
+
+BATTLEBOTS TEAM CTU PRAGUE
 
 small technical information
 
@@ -460,7 +409,7 @@ brief transformation
 
 transition into the cutting-mat workspace
 
-The intro should transition naturally into the Competitive hero.
+The intro should transition naturally into the Battlebots hero.
 
 Do not replay the complete intro whenever the user switches between internal pages.
 

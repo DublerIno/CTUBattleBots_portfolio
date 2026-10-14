@@ -19,8 +19,8 @@ const technical = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CTU BattleBots",
-    template: "%s — CTU BattleBots",
+    default: "Overengineered",
+    template: "%s — Overengineered",
   },
   description: "Bojoví roboti a studentské inženýrství na Fakultě elektrotechnické ČVUT v Praze.",
 };

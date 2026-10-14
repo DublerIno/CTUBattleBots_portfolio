@@ -14,11 +14,10 @@ export default function TeamPage() {
             <i aria-hidden="true" />
           </p>
           <h1 id="team-title">
-            CTU
-            <br />
-            BATTLEBOTS
+            <span>OVER</span>
+            <span>ENGINEERED</span>
           </h1>
-          <p className="team-location">PRAGUE</p>
+          <p className="team-location">CTU PRAGUE</p>
         </div>
 
         <div className="team-photo" role="img" aria-label="Prostor pro připravovanou fotografii týmu">

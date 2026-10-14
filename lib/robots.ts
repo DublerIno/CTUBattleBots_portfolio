@@ -69,8 +69,10 @@ export const robots: Robot[] = [
       "Pro šasi a rotující zbraň plánujeme využít část kovové trubky, která vytvoří pevný vnější plášť robota.",
     ],
     image: {
-      src: null,
-      alt: "Vyhrazený prostor pro budoucí fotografii nebo render robota MELTY / 02.",
+      src: `${assetBasePath}/melty-02-still.webp`,
+      animationSrc: `${assetBasePath}/melty-02-rotation.webp`,
+      alt: "Render bojového robota MELTY / 02 v sestaveném stavu.",
+      animationAlt: "Animovaný render ukazující rotaci bojového robota MELTY / 02.",
     },
     specs: [
       { label: "HMOTNOST", value: "1,5 kg" },

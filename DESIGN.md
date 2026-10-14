@@ -4,7 +4,7 @@
 
 The website is a digital engineering workbench.
 
-Every page exists on top of a route-specific cutting mat: blue for Competitive, green for Events and red for Team.
+Every page exists on top of a route-specific cutting mat: blue for Battlebots, green for Events and red for Team.
 
 Robots, text, measurements and navigation should feel like objects, labels and documentation placed onto that work surface.
 
@@ -40,7 +40,7 @@ Primary environment:
 
 ROUTE-SPECIFIC CUTTING MAT
 
-* Competitive: blue
+* Battlebots: blue
 * Events: green
 * Team: red
 
@@ -173,15 +173,15 @@ It should feel like a small control attached to the cutting mat rather than a no
 
 Content:
 
-COMPETITIVE
+BATTLEBOTS
 EVENTS
 TEAM
 
-plus:
-
-[sponeond@fel.cvut.cz](mailto:sponeond@fel.cvut.cz)
-
 and the supplied CTU logo.
+
+The email address is not part of navigation. An Instagram link may be added later when supplied.
+
+The menu hides after sustained downward scrolling, returns on upward scrolling or near the top, and stays visible while keyboard-focused or open on mobile.
 
 The CTU logo should remain visually secondary to the BattleBots identity.
 
@@ -219,7 +219,7 @@ Avoid springy movement unless there is a very specific reason.
 
 Switching between:
 
-Competitive
+Battlebots
 Events
 Team
 
@@ -250,7 +250,9 @@ small technical indicator
 
 ↓
 
-CTU BATTLEBOTS
+OVERENGINEERED
+
+BATTLEBOTS TEAM CTU PRAGUE
 
 ↓
 
@@ -262,38 +264,15 @@ workspace becomes visible
 
 ↓
 
-Competitive hero appears
+Battlebots hero appears
 
 The intro should create atmosphere rather than tell a long story.
 
 ---
 
-# Competitive hero
+# Battlebots hero
 
-The first viewport should be simple.
-
-Primarily:
-
-large centered text
-
-with a large amount of space around it.
-
-Possible temporary structure:
-
-CTU
-BATTLEBOTS
-
-COMPETITIVE ROBOTICS
-PRAGUE
-
-or:
-
-WE BUILD
-COMBAT ROBOTS.
-
-Do not settle permanently on hero copy until real content is supplied.
-
-Treat current hero wording as placeholder content.
+The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy.
 
 Scrolling leads directly into MELTY / 01.
 
@@ -426,7 +405,7 @@ Use one large robot-image placeholder.
 
 # Scroll
 
-Competitive should feel continuous.
+Battlebots should feel continuous.
 
 Potential sequence:
 
@@ -464,7 +443,7 @@ Animations should feel choreographed.
 
 # Image animation
 
-The supplied MELTY / 01 disassembly render plays once when its specimen enters the viewport. Its assembled frame stays visible beforehand and for reduced-motion users. Preserve the transparent background so the robot sits directly on the cutting mat.
+The supplied MELTY / 01 disassembly and MELTY / 02 rotation renders each play once when their specimens enter the viewport. Their still frames stay visible beforehand and for reduced-motion users. Preserve the transparent backgrounds so the robots sit directly on the cutting mat.
 
 Create depth using subtle 2D motion such as:
 
@@ -478,7 +457,7 @@ Create depth using subtle 2D motion such as:
 
 Do not fake full 3D rotation.
 
-The team showcase video occupies the existing media frame at its native 16:9 ratio and uses native playback controls. Future video revisions can replace the file without changing the layout.
+The two-second-shortened team showcase video occupies the opening viewport media frame at its native 16:9 ratio and uses native playback controls. Future video revisions can replace the file without changing the layout.
 
 ---
 
@@ -502,16 +481,14 @@ Keep the green cutting mat and the shared technical-line language.
 
 # Team
 
-For now:
+Current heading:
 
 TEAM
 
-CTU BATTLEBOTS
-PRAGUE
+OVERENGINEERED
+CTU PRAGUE
 
-TEAM PAGE COMING SOON
-
-Keep it minimal.
+Keep the existing team photo placeholder and concise recruitment copy until real photography is supplied.
 
 Do not invent names, roles or photographs.
 
@@ -641,4 +618,4 @@ When a transparent robot render is available, place it directly over the cutting
 
 The navigation uses the supplied CTU lion mark as a white local SVG. Keep it centered and visually secondary on desktop, left-aligned within the mobile navigation label, and preserve the source/license record in `ASSET_ATTRIBUTION.md`.
 
-Route color is part of the cutting-mat system: Competitive uses deep desaturated blue, Events uses deep desaturated engineering green, and Team uses deep workshop red. Only the mat/panel material color changes; grid density, typography, warm-white ink, navigation geometry and motion language stay shared.
+Route color is part of the cutting-mat system: Battlebots uses deep desaturated blue, Events uses deep desaturated engineering green, and Team uses deep workshop red. Only the mat/panel material color changes; grid density, typography, warm-white ink, navigation geometry and motion language stay shared.

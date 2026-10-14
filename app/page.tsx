@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { CompetitiveHero } from "@/components/competitive-hero";
-import { CompetitiveIntro } from "@/components/competitive-intro";
+import { BattlebotsHero } from "@/components/battlebots-hero";
 import { RobotSection } from "@/components/robot-section";
 import { robots } from "@/lib/robots";
 
 export const metadata: Metadata = {
-  title: "Competitive",
+  title: "Battlebots",
 };
 
-export default function CompetitivePage() {
+export default function BattlebotsPage() {
   return (
     <main id="main-content">
-      <CompetitiveHero />
-      <CompetitiveIntro />
+      <BattlebotsHero />
       <div className="robot-sequence">
         {robots.map((robot, index) => (
           <RobotSection key={robot.slug} robot={robot} index={index} />
