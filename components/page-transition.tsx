@@ -2,12 +2,11 @@
 
 import Link, { type LinkProps } from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { createContext, useCallback, useContext, useRef, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 type TransitionContextValue = {
   navigate: (href: string) => void;
-  transitioning: boolean;
 };
 
 const TransitionContext = createContext<TransitionContextValue | null>(null);
@@ -16,12 +15,19 @@ export function PageTransitionProvider({ children }: Readonly<{ children: React.
   const router = useRouter();
   const pathname = usePathname();
   const overlayRef = useRef<HTMLDivElement>(null);
-  const [transitioning, setTransitioning] = useState(false);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
+
+  useEffect(() => () => {
+    timelineRef.current?.kill();
+  }, []);
 
   const navigate = useCallback(
     (href: string) => {
-      if (transitioning) return;
+      const wasTransitioning = Boolean(timelineRef.current);
+      timelineRef.current?.kill();
+      timelineRef.current = null;
       if (href === pathname) {
+        if (wasTransitioning && overlayRef.current) gsap.set(overlayRef.current, { visibility: "hidden" });
         window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
@@ -33,23 +39,25 @@ export function PageTransitionProvider({ children }: Readonly<{ children: React.
         return;
       }
 
-      setTransitioning(true);
-      gsap
+      const timeline = gsap
         .timeline({
           defaults: { ease: "power3.inOut" },
-          onComplete: () => setTransitioning(false),
+          onComplete: () => {
+            if (timelineRef.current === timeline) timelineRef.current = null;
+          },
         })
         .set(overlay, { clipPath: "inset(100% 0 0 0)", visibility: "visible" })
         .to(overlay, { clipPath: "inset(0% 0 0 0)", duration: 0.34 })
         .call(() => router.push(href))
         .to(overlay, { clipPath: "inset(0 0 100% 0)", duration: 0.4, delay: 0.08 })
         .set(overlay, { visibility: "hidden" });
+      timelineRef.current = timeline;
     },
-    [pathname, router, transitioning],
+    [pathname, router],
   );
 
   return (
-    <TransitionContext.Provider value={{ navigate, transitioning }}>
+    <TransitionContext.Provider value={{ navigate }}>
       {children}
       <div ref={overlayRef} className="route-transition" aria-hidden="true">
         <span />
