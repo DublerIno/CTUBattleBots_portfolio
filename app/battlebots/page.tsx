@@ -10,7 +10,7 @@ export default function BattlebotsGalleryPage() {
     <main id="main-content" className="battlebots-gallery-page">
       <header className="gallery-heading">
         <p className="section-label"><span>BATTLEBOTS</span><i aria-hidden="true" /></p>
-        <h1>NAŠI <br className="gallery-mobile-break" />BATTLEBOTS</h1>
+        <h1>NAŠI BATTLEBOTS</h1>
       </header>
       <div className="specimen-grid" aria-label="Naši bojoví roboti">
         {robots.map((robot) => (

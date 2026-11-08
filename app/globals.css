@@ -577,8 +577,6 @@ a {
   letter-spacing: -0.04em;
 }
 
-.gallery-mobile-break { display: none; }
-
 .specimen-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -620,13 +618,14 @@ a {
   object-fit: contain;
   padding: 4rem 0 0;
   filter: grayscale(1) brightness(0.8) drop-shadow(0 1.1rem 1rem rgba(0,0,0,.3));
+  transform: scale(1.15);
   transition: filter 350ms ease, transform 450ms ease;
 }
 
 .specimen-tile:hover .specimen-tile-image img,
 .specimen-tile:focus-visible .specimen-tile-image img {
   filter: grayscale(0) brightness(1) drop-shadow(0 1.1rem 1rem rgba(0,0,0,.3));
-  transform: scale(1.045);
+  transform: scale(1.22);
 }
 
 .specimen-tile-meta {
@@ -1474,10 +1473,8 @@ a {
   .destination-arrow { grid-column: 2; grid-row: 1 / 3; width: 1.4rem; height: 1.4rem; }
 
   .battlebots-gallery-page { padding-top: 9rem; padding-bottom: 5rem; }
-  .gallery-heading h1 { font-size: clamp(4rem, 20vw, 7rem); }
-  .gallery-heading h1 { white-space: normal; }
-  .gallery-mobile-break { display: initial; }
-  .specimen-grid { grid-template-columns: 1fr; gap: 1.4rem; margin-top: 3.5rem; }
+  .gallery-heading h1 { font-size: clamp(2.6rem, 12vw, 5.5rem); white-space: nowrap; }
+  .specimen-grid { grid-template-columns: 1fr; gap: 1.4rem; margin-top: 3rem; }
   .specimen-tile-meta span:first-child { font-size: clamp(3.5rem, 15vw, 5rem); }
 
   .robot-detail-page { padding-top: 8.5rem; }
