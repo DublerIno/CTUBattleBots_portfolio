@@ -86,30 +86,29 @@ Do not activate Three.js, React Three Fiber or WebGL-oriented skills.
 The main navigation contains only:
 
 * Battlebots
-* Events
-* Team
+* Akce
+* Tým
 
 Additionally show the CTU logo. Do not show the email address in navigation; an Instagram link may replace it later when supplied.
 
-The CTU logo asset will be provided later in both black and white versions.
-
-Do not invent or recreate the CTU logo.
-
-Use a simple placeholder until the real asset is added.
+Use the supplied white CTU lion SVG. The lion links to the homepage on every route.
 
 ---
 
 # Routes
 
-The default landing page is Battlebots.
+The default landing page is a dedicated team homepage.
 
 Preferred route structure:
 
-* `/` → Battlebots
-* `/events` → Events
-* `/team` → Team
+* `/` → Home with Overengineered, showcase video and destination links
+* `/battlebots` → square specimen gallery
+* `/battlebots/melty-01` → MELTY / 01 detail
+* `/battlebots/melty-02` → MELTY / 02 detail
+* `/akce` → public events
+* `/tym` → team
 
-The homepage `/` must therefore open directly into the Battlebots experience.
+Legacy `/events` and `/team` routes redirect to the Czech routes for old links.
 
 ---
 
@@ -150,9 +149,9 @@ The menu must remain usable with keyboard navigation and touch devices.
 
 Every page uses a route-specific CUTTING MAT as its visual foundation:
 
-* Battlebots uses blue
-* Events uses green
-* Team uses red
+* Home, Battlebots and robot details use blue
+* Akce uses green
+* Tým uses red
 
 The cutting mat should make the website feel like the robots and components are physically placed on an engineering workbench. Keep every route color dark, desaturated and physical.
 
@@ -253,21 +252,11 @@ Specifications should visually resemble engineering annotations, equipment label
 
 # Battlebots page
 
-The Battlebots page is currently the most important page.
+The homepage has the brief Overengineered load intro, then one opening viewport with the Czech team introduction and showcase video. Its next section contains large open editorial links to Battlebots, Akce and Tým.
 
-It consists of:
+The Battlebots index is an explicit exception to the no-grid principle: it shows three square specimen frames, for MELTY / 01, MELTY / 02 and TBA. The first two link to separate robot details; TBA is inert. Robot stills are gray until desktop hover/focus, while touch shows them in full color. This gallery is a navigation surface, not a generic card grid.
 
-1. Brief Overengineered load intro
-2. One opening viewport with Overengineered, the Czech team introduction, and the showcase video
-3. MELTY / 01
-4. MELTY / 02
-5. End of Battlebots section
-
-The page should feel like a continuous visual sequence as the user scrolls.
-
-Avoid presenting all robots as cards in a grid.
-
-Each robot receives its own large section.
+Each robot detail has its own large specimen composition, specifications and one render/animation. It retains the current technical copy and once-in-view animation.
 
 ---
 
@@ -314,8 +303,6 @@ Beetleweight specimen with a supplied transparent rotation animation that plays 
 
 Present the public events where visitors can try small Antweight robots.
 
-For now create only a visually intentional placeholder page.
-
 It should use the same:
 
 * cutting mat
@@ -326,11 +313,11 @@ It should use the same:
 
 Show something similar to:
 
-EVENTS
+AKCE
 
-NOC VĚDY
+NADCHÁZEJÍCÍ — MAKER FAIRE PRAGUE, 22. 5. 2027
 
-MAKER FAIRE BRNO
+PROBĚHLÉ — NOC VĚDY, 25. 9. 2026; MAKER FAIRE BRNO, 17.–18. 10. 2026
 
 Do not invent specifications or features.
 
@@ -342,7 +329,7 @@ Keep the existing visually intentional Team page and its concise recruitment cop
 
 Heading:
 
-TEAM
+TÝM
 
 OVERENGINEERED
 CTU PRAGUE

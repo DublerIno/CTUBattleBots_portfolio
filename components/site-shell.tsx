@@ -8,9 +8,9 @@ import { PageTransitionProvider } from "@/components/page-transition";
 
 export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
-  const matTheme = pathname.startsWith("/events")
+  const matTheme = pathname.startsWith("/akce") || pathname.startsWith("/events")
     ? "mat-theme-events"
-    : pathname.startsWith("/team")
+    : pathname.startsWith("/tym") || pathname.startsWith("/team")
       ? "mat-theme-team"
       : "mat-theme-battlebots";
 

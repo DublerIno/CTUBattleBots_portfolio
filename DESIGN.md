@@ -4,7 +4,7 @@
 
 The website is a digital engineering workbench.
 
-Every page exists on top of a route-specific cutting mat: blue for Battlebots, green for Events and red for Team.
+Every page exists on top of a route-specific cutting mat: blue for Home, Battlebots and robot details, green for Akce and red for Tým.
 
 Robots, text, measurements and navigation should feel like objects, labels and documentation placed onto that work surface.
 
@@ -40,9 +40,9 @@ Primary environment:
 
 ROUTE-SPECIFIC CUTTING MAT
 
-* Battlebots: blue
-* Events: green
-* Team: red
+* Home and Battlebots: blue
+* Akce: green
+* Tým: red
 
 Approximate feeling:
 
@@ -174,8 +174,8 @@ It should feel like a small control attached to the cutting mat rather than a no
 Content:
 
 BATTLEBOTS
-EVENTS
-TEAM
+AKCE
+TÝM
 
 and the supplied CTU logo.
 
@@ -220,8 +220,8 @@ Avoid springy movement unless there is a very specific reason.
 Switching between:
 
 Battlebots
-Events
-Team
+Akce
+Tým
 
 should feel designed.
 
@@ -264,17 +264,19 @@ workspace becomes visible
 
 ↓
 
-Battlebots hero appears
+Home hero appears
 
 The intro should create atmosphere rather than tell a long story.
 
 ---
 
-# Battlebots hero
+# Home hero
 
 The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy.
 
-Scrolling leads directly into MELTY / 01.
+Scrolling leads into the three open editorial destination rows: Battlebots, Akce and Tým.
+
+The Battlebots index is a separate square specimen gallery. This is a navigation composition, not the presentation format for technical details. Existing supplied stills fill the first two frames; a text-only TBA frame is third. Each robot detail remains its own large engineering specimen.
 
 ---
 
@@ -359,61 +361,29 @@ Avoid a conventional striped table.
 
 ---
 
-# MELTY / 01 placeholder
+# MELTY / 01
 
-For the initial prototype:
-
-MELTY / 01
-
-CLASS
-ANTWEIGHT
-
-MCU
-ESP32-C3
-
-VBAT
-7.4 V
-
-STATUS
-TBD
-
-Use one large empty robot-image placeholder.
-
-Placeholder should clearly communicate where the final render goes.
+Use the supplied still and transparent disassembly animation with the actual current specifications from `lib/robots.ts`.
 
 ---
 
-# MELTY / 02 placeholder
+# MELTY / 02
 
-MELTY / 02
-
-CLASS
-BEETLEWEIGHT
-
-MCU
-TBD
-
-VBAT
-TBD
-
-STATUS
-TBD
-
-Use one large robot-image placeholder.
+Use the supplied still and transparent rotation animation with the actual current specifications from `lib/robots.ts`.
 
 ---
 
 # Scroll
 
-Battlebots should feel continuous.
+Each robot detail should feel like one continuous engineering specimen.
 
 Potential sequence:
 
-Hero
+Gallery selection
 
 ↓
 
-MELTY / 01 identifier appears
+MELTY identifier appears
 
 ↓
 
@@ -425,15 +395,7 @@ technical specifications reveal
 
 ↓
 
-robot moves out / next section enters
-
-↓
-
-MELTY / 02
-
-↓
-
-end section
+supporting technical description appears
 
 Do not make every piece move independently.
 
@@ -461,29 +423,29 @@ The two-second-shortened team showcase video occupies the opening viewport media
 
 ---
 
-# Events
+# Akce
 
 Use an open editorial schedule rather than event cards:
 
 large page title
 
-EVENTS
+AKCE
 
 short Czech introduction
 
-NOC VĚDY — 25. 9. 2026
+NADCHÁZEJÍCÍ — MAKER FAIRE PRAGUE — 22. 5. 2027
 
-MAKER FAIRE BRNO — 17.–18. 10. 2026
+PROBĚHLÉ — NOC VĚDY — 25. 9. 2026; MAKER FAIRE BRNO — 17.–18. 10. 2026
 
 Keep the green cutting mat and the shared technical-line language.
 
 ---
 
-# Team
+# Tým
 
 Current heading:
 
-TEAM
+TÝM
 
 OVERENGINEERED
 CTU PRAGUE
@@ -619,3 +581,7 @@ When a transparent robot render is available, place it directly over the cutting
 The navigation uses the supplied CTU lion mark as a white local SVG. Keep it centered and visually secondary on desktop, left-aligned within the mobile navigation label, and preserve the source/license record in `ASSET_ATTRIBUTION.md`.
 
 Route color is part of the cutting-mat system: Battlebots uses deep desaturated blue, Events uses deep desaturated engineering green, and Team uses deep workshop red. Only the mat/panel material color changes; grid density, typography, warm-white ink, navigation geometry and motion language stay shared.
+
+## Route hierarchy — November 2026
+
+The CTU lion is a persistent home link. Home (`/`) is the Overengineered/video hero followed by three open, ruled destination rows for Battlebots, Akce and Tým. No navigation item is selected on Home. The blue Battlebots index (`/battlebots`) is a three-frame square specimen gallery, an intentional navigation-only exception to the usual no-grid robot presentation; existing stills stay transparent and are grayscale until pointer hover or keyboard focus, but remain colored on touch. The third frame is inert TBA. Individual robot details (`/battlebots/melty-01` and `/battlebots/melty-02`) retain the large existing engineering composition and once-in-view animations. Green `/akce` divides upcoming and past dates; red `/tym` preserves the recruitment layout. Old English route URLs redirect to the Czech routes.

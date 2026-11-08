@@ -9,7 +9,7 @@ import type { Robot } from "@/lib/robots";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function RobotSection({ robot, index }: { robot: Robot; index: number }) {
+export function RobotSection({ robot, index, standalone = false }: { robot: Robot; index: number; standalone?: boolean }) {
   const sectionRef = useRef<HTMLElement>(null);
   const renderRef = useRef<HTMLDivElement>(null);
   const [animationStarted, setAnimationStarted] = useState(false);
@@ -94,17 +94,18 @@ export function RobotSection({ robot, index }: { robot: Robot; index: number }) 
     <section
       ref={sectionRef}
       id={robot.slug}
-      className={`robot-section${index % 2 ? " is-alternate" : ""}`}
+      className={`robot-section${index % 2 ? " is-alternate" : ""}${standalone ? " is-standalone" : ""}`}
       aria-labelledby={`${robot.slug}-title`}
     >
       <div className="robot-stage">
         <div className="robot-info">
           <p className="robot-classification">{robot.classification} MELTY BRAIN</p>
           <div className="robot-name-clip">
-            <h2 id={`${robot.slug}-title`} className="robot-name" data-robot="name">
-              <span>MELTY /</span>
-              <span>{robot.unit}</span>
-            </h2>
+            {standalone ? (
+              <h1 id={`${robot.slug}-title`} className="robot-name" data-robot="name"><span>MELTY /</span><span>{robot.unit}</span></h1>
+            ) : (
+              <h2 id={`${robot.slug}-title`} className="robot-name" data-robot="name"><span>MELTY /</span><span>{robot.unit}</span></h2>
+            )}
           </div>
           <TechnicalSpec specs={robot.specs} />
           <div className="robot-description" data-robot="description">

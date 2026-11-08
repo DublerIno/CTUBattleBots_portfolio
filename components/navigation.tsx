@@ -6,9 +6,9 @@ import { useEffect, useId, useRef, useState } from "react";
 import { TransitionLink } from "@/components/page-transition";
 
 const items = [
-  { href: "/", label: "BATTLEBOTS" },
-  { href: "/events", label: "EVENTS" },
-  { href: "/team", label: "TEAM" },
+  { href: "/battlebots", label: "BATTLEBOTS" },
+  { href: "/akce", label: "AKCE" },
+  { href: "/tym", label: "TÝM" },
 ];
 
 const ctuLogoSrc = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/ctu-logo-white.svg`;
@@ -17,7 +17,7 @@ function NavigationItems({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
 
   return items.map((item) => {
-    const active = pathname === item.href;
+    const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
     return (
       <TransitionLink
         key={item.href}
@@ -35,7 +35,7 @@ function NavigationItems({ onNavigate }: { onNavigate?: () => void }) {
 
 function CtuLogo() {
   return (
-    <div className="ctu-logo">
+    <TransitionLink href="/" className="ctu-logo" aria-label="Overengineered — úvodní stránka">
       <Image
         className="ctu-logo-image"
         src={ctuLogoSrc}
@@ -44,7 +44,7 @@ function CtuLogo() {
         alt="Czech Technical University in Prague"
         preload
       />
-    </div>
+    </TransitionLink>
   );
 }
 
