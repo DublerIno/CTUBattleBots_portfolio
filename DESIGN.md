@@ -272,11 +272,11 @@ The intro should create atmosphere rather than tell a long story.
 
 # Home hero
 
-The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy.
+The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy. The video is a click-to-load YouTube embed, preserving the current poster until interaction.
 
 Scrolling leads into the three open editorial destination rows: Battlebots, Akce and Tým.
 
-The Battlebots index is a separate square specimen gallery. This is a navigation composition, not the presentation format for technical details. Existing supplied stills fill the first two frames; a text-only TBA frame is third. Each robot detail remains its own large engineering specimen.
+The Battlebots index is a separate square specimen gallery. This is a navigation composition, not the presentation format for technical details. Existing supplied stills fill the first two frames; the third uses the supplied transparent TBA render and a TBA label. Each robot detail remains its own large engineering specimen.
 
 ---
 
@@ -419,7 +419,9 @@ Create depth using subtle 2D motion such as:
 
 Do not fake full 3D rotation.
 
-The two-second-shortened team showcase video occupies the opening viewport media frame at its native 16:9 ratio and uses native playback controls. Future video revisions can replace the file without changing the layout.
+The team showcase video occupies the opening viewport media frame at its native 16:9 ratio. Its poster remains visible until a user chooses to load the privacy-enhanced YouTube embed; third-party video code is not loaded on the initial page view.
+
+Below the homepage hero, a clean horizontal strip presents seven real documentary photos from the workshop and competitions. It has no visible heading or captions, does not open a lightbox, and preserves each photo’s aspect ratio and color. Desktop arrows and a subtle progress line support browsing; phones use native horizontal swipe. This is a homepage documentary strip, not a robot-detail gallery.
 
 ---
 
@@ -431,7 +433,7 @@ large page title
 
 AKCE
 
-short Czech introduction
+short Czech introduction about current Czech Combat Robot League participation, followed by the visitor paragraph
 
 NADCHÁZEJÍCÍ — MAKER FAIRE PRAGUE — 22. 5. 2027
 
@@ -450,7 +452,7 @@ TÝM
 OVERENGINEERED
 CTU PRAGUE
 
-Keep the existing team photo placeholder and concise recruitment copy until real photography is supplied.
+Use the supplied team photo beside the heading on desktop, with concise recruitment copy directly below OVERENGINEERED in the left column. On mobile, place the photo after the copy. Do not invent names or roles.
 
 Do not invent names, roles or photographs.
 

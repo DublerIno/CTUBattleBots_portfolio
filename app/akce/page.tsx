@@ -30,8 +30,9 @@ export default function EventsPage() {
     <main id="main-content">
       <section className="events-page" aria-labelledby="events-title">
         <div className="events-copy">
-          <p className="section-label"><span>AKCE</span><i aria-hidden="true" /></p>
+          <p className="section-label"><span>EVENTS</span><i aria-hidden="true" /></p>
           <h1 id="events-title">AKCE</h1>
+          <p className="events-intro">Aktuálně se účastníme soutěží <a href="https://tetragonleague.cz/" target="_blank" rel="noopener noreferrer">Czech Combat Robot League</a> od FLS Battlebots. Soutěžíme v kategoriích Antweight a Beetleweight. <a href="https://www.flsbattlebots.cz/pravidla" target="_blank" rel="noopener noreferrer">Pravidla a podrobnosti soutěže</a> najdete na stránkách FLS Battlebots.</p>
           <p className="events-intro">Pro návštěvníky akcí připravujeme malé roboty kategorie Antweight, se kterými si mohou sami vyzkoušet souboj.</p>
         </div>
         <div className="event-groups">

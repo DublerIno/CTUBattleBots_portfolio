@@ -10,7 +10,7 @@ export default function BattlebotsGalleryPage() {
     <main id="main-content" className="battlebots-gallery-page">
       <header className="gallery-heading">
         <p className="section-label"><span>BATTLEBOTS</span><i aria-hidden="true" /></p>
-        <h1>NAŠI BATTLEBOTS</h1>
+        <h1>NAŠI BATTLEBOTI</h1>
       </header>
       <div className="specimen-grid" aria-label="Naši bojoví roboti">
         {robots.map((robot) => (
@@ -25,6 +25,7 @@ export default function BattlebotsGalleryPage() {
           </TransitionLink>
         ))}
         <div className="specimen-tile specimen-tile-tba" aria-label="Další robot bude oznámen později">
+          <span className="specimen-tile-image"><Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/tba.png`} alt="Připravovaný battlebot" fill sizes="(max-width: 720px) calc(100vw - 2.3rem), (max-width: 1100px) 45vw, 30vw" /></span>
           <span className="specimen-tba-text">TBA</span>
           <i className="registration registration-top" aria-hidden="true" />
           <i className="registration registration-bottom" aria-hidden="true" />
