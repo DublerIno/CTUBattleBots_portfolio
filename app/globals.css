@@ -1240,7 +1240,7 @@ a {
 
 .event-row h3 {
   margin: 0;
-  font: 700 clamp(2.6rem, 3.4vw, 3.8rem)/0.9 var(--font-display-family);
+  font: 700 clamp(2.1rem, 2.7vw, 3rem)/0.9 var(--font-display-family);
   letter-spacing: -0.025em;
   text-transform: uppercase;
 }
@@ -1603,13 +1603,13 @@ a {
   .robot-section.is-standalone .robot-render-inner { aspect-ratio: 1 / 1.03; }
 
   .battlebots-title {
-    white-space: normal;
-    font-size: clamp(4.3rem, 20vw, 5.5rem);
-    line-height: 0.8;
+    white-space: nowrap;
+    font-size: clamp(2.75rem, 14vw, 4.25rem);
+    line-height: 0.82;
   }
 
   .battlebots-title > span {
-    display: block;
+    display: inline;
   }
 
   .battlebots-lead {
@@ -1765,7 +1765,7 @@ a {
   }
 
   .event-row h3 {
-    font-size: clamp(2.7rem, 12vw, 3.6rem);
+    font-size: clamp(2.25rem, 10vw, 3rem);
   }
 
   .event-row time {

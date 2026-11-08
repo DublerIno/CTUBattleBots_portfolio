@@ -272,7 +272,7 @@ The intro should create atmosphere rather than tell a long story.
 
 # Home hero
 
-The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy. The video is a click-to-load YouTube embed, preserving the current poster until interaction.
+The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. Keep OVERENGINEERED on one line at every viewport, scaling the display type down on phones. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy. The video is a click-to-load YouTube embed, preserving the current poster until interaction.
 
 Scrolling leads into the three open editorial destination rows: Battlebots, Akce and Tým.
 
