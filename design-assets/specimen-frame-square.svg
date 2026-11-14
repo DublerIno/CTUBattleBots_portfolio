@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+  <title>Overengineered square specimen frame</title>
+  <rect x=".5" y=".5" width="479" height="479" fill="none" stroke="#eee8dc" stroke-opacity=".62"/>
+  <path d="M12 34V12H34M446 12h22v22M468 446v22h-22M34 468H12v-22" fill="none" stroke="#eee8dc" stroke-width="1"/>
+</svg>
