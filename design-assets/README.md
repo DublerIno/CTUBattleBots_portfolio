@@ -12,6 +12,10 @@ Tyto SVG jsou samostatné, editovatelné verze prvků aktuálního webu. Nejsou 
 
 Rámečky lze otevřít v Inkscape, Illustratoru nebo Figmě a měnit rozměr beze ztráty kvality. SVG podložky používají vektorové vzory a přechody. Web k nim navíc přidává jemné CSS zrno a světlo reagující na kurzor, které v těchto statických SVG není; export tedy představuje věrnou *statickou* vrstvu, nikoli pixelově shodný screenshot. Měřicí čísla na okrajích web vykresluje jako text pomocí IBM Plex Mono, proto v SVG nejsou.
 
+## Rastrové verze podložek
+
+Ve složce `raster/` jsou modrá, zelená i červená podložka jako PNG ve velikostech **1440 × 900 px** a **2880 × 1800 px**. Větší verze je vykreslená ve dvojnásobném rozlišení ze stejného SVG, nikoli dodatečně zvětšená z menšího PNG. PNG jsou neprůhledná a určená jako hotové pozadí; pro jiný poměr stran nebo větší tiskový formát vycházejte ze SVG.
+
 ## Písma
 
 - **Big Shoulders** — velké titulky, názvy stránek a robotů. Na webu se načítá přes `next/font/google`; hlavní řezy jsou přibližně 700–800.
