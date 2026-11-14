@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <title>Overengineered portrait specimen frame — medium</title>
+  <rect x="4" y="4" width="472" height="592" fill="none" stroke="#eee8dc" stroke-opacity=".78" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M16 42V16H42M438 16h26v26M464 558v26h-26M42 584H16v-26" fill="none" stroke="#eee8dc" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+  <g fill="none" stroke="#eee8dc" stroke-opacity=".78" stroke-width="2" vector-effect="non-scaling-stroke">
+    <circle cx="240" cy="4" r="13"/><path d="M223 4h34M240 -13v34"/>
+    <circle cx="476" cy="300" r="13"/><path d="M459 300h34M476 283v34"/>
+    <circle cx="240" cy="596" r="13"/><path d="M223 596h34M240 579v34"/>
+    <circle cx="4" cy="300" r="13"/><path d="M-13 300h34M4 283v34"/>
+  </g>
+</svg>

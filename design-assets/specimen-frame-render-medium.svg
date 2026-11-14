@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Overengineered robot render frame — medium</title>
+  <rect x="4" y="4" width="792" height="592" fill="none" stroke="#eee8dc" stroke-opacity=".78" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M16 42V16H42M758 16h26v26M784 558v26h-26M42 584H16v-26" fill="none" stroke="#eee8dc" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+  <g fill="none" stroke="#eee8dc" stroke-opacity=".78" stroke-width="2" vector-effect="non-scaling-stroke">
+    <circle cx="400" cy="4" r="13"/><path d="M383 4h34M400 -13v34"/>
+    <circle cx="796" cy="300" r="13"/><path d="M779 300h34M796 283v34"/>
+    <circle cx="400" cy="596" r="13"/><path d="M383 596h34M400 579v34"/>
+    <circle cx="4" cy="300" r="13"/><path d="M-13 300h34M4 283v34"/>
+  </g>
+</svg>

@@ -9,8 +9,12 @@ Tyto SVG jsou samostatné, editovatelné verze prvků aktuálního webu. Nejsou 
 | `cutting-mat-red.svg` | červená podložka Tým | stejné |
 | `specimen-frame-square.svg` | čtvercové rámečky galerie Battlebotů | 480 × 480, průhledný vnitřek |
 | `specimen-frame-render.svg` | rámeček velkého renderu robota | 800 × 600, průhledný vnitřek, zaměřovací značky |
+| `specimen-frame-*-medium.svg` | čitelnější rámečky pro menší použití | čtverec, 4:3 render a 4:5 portrét |
+| `specimen-frame-*-bold.svg` | výrazné rámečky pro silné zmenšení | stejné tři formáty |
 
 Rámečky lze otevřít v Inkscape, Illustratoru nebo Figmě a měnit rozměr beze ztráty kvality. SVG podložky používají vektorové vzory a přechody. Web k nim navíc přidává jemné CSS zrno a světlo reagující na kurzor, které v těchto statických SVG není; export tedy představuje věrnou *statickou* vrstvu, nikoli pixelově shodný screenshot. Měřicí čísla na okrajích web vykresluje jako text pomocí IBM Plex Mono, proto v SVG nejsou.
+
+Silnější rámečky používají `vector-effect="non-scaling-stroke"`, aby jejich tah při zmenšování SVG na obrazovce neztenčil. Sada **medium** má základní linku 2 px a rohy 2,5 px; sada **bold** 3 px a rohy 4 px. Nový formát `portrait` má poměr stran 4:5 pro vertikální kompozice. Některé grafické editory mohou při importu vlastnost `vector-effect` ignorovat; v takovém případě po změně velikosti nastavte tloušťku tahu ručně. Původní jemné SVG zůstávají beze změny.
 
 ## Rastrové verze podložek
 
