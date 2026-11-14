@@ -5,6 +5,7 @@ import { CuttingMat } from "@/components/cutting-mat";
 import { Intro } from "@/components/intro";
 import { Navigation } from "@/components/navigation";
 import { PageTransitionProvider } from "@/components/page-transition";
+import { SiteFooter } from "@/components/site-footer";
 
 export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
@@ -23,6 +24,7 @@ export function SiteShell({ children }: Readonly<{ children: React.ReactNode }>)
         </a>
         <Navigation />
         <div className="page-layer">{children}</div>
+        <SiteFooter />
         <Intro />
       </PageTransitionProvider>
     </div>

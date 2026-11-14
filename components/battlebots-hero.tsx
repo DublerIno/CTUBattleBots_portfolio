@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { ctuUrl, felUrl } from "@/lib/site-links";
 
 const videoId = "buM0eAWilNI";
 
@@ -11,6 +12,9 @@ export function BattlebotsHero() {
 
   return (
     <section className="battlebots-hero" aria-labelledby="battlebots-title">
+      <a className="hero-ctu-mark" href={ctuUrl} target="_blank" rel="noopener noreferrer" aria-label="Web ČVUT (otevře se v nové kartě)">
+        <Image src={`${assetBasePath}/ctu-logo-white.svg`} alt="Znak ČVUT" width={160} height={160} priority />
+      </a>
       <div className="battlebots-hero-copy">
         <h1 id="battlebots-title" className="battlebots-title">
           <span>OVER</span>
@@ -20,6 +24,10 @@ export function BattlebotsHero() {
           Jsme nový tým studentů Fakulty elektrotechnické ČVUT v Praze. Pracujeme na bojových robotech
           určených pro soutěže BattleBots a Českou ligu bojových robotů.
         </p>
+        <div className="hero-institution-links" aria-label="Institucionální odkazy">
+          <a href={ctuUrl} target="_blank" rel="noopener noreferrer">ČVUT</a>
+          <a href={felUrl} target="_blank" rel="noopener noreferrer">FEL ČVUT</a>
+        </div>
       </div>
 
       <div className="battlebots-video">

@@ -179,7 +179,7 @@ TÝM
 
 and the supplied CTU logo.
 
-The email address is not part of navigation. An Instagram link may be added later when supplied.
+The email address is not part of navigation. YouTube and Instagram appear as a compact secondary icon strip attached to the desktop navigation, and inside the expanded mobile menu; the three primary navigation items remain unchanged.
 
 The menu hides after sustained downward scrolling, returns on upward scrolling or near the top, and stays visible while keyboard-focused or open on mobile.
 
@@ -272,7 +272,9 @@ The intro should create atmosphere rather than tell a long story.
 
 # Home hero
 
-The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. Keep OVERENGINEERED on one line at every viewport, scaling the display type down on phones. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. Do not add a second introductory section or extra marketing copy. The video is a click-to-load YouTube embed, preserving the current poster until interaction.
+The first viewport combines the Overengineered title, short Czech team introduction and one 16:9 showcase video. Keep OVERENGINEERED on one line at every viewport, scaling the display type down on phones. On desktop use an asymmetrical editorial layout; on phones stack the title, text and video while keeping all three prominent. A separate, visibly at least 150px CTU mark sits in the first third of the homepage; the small navigation lion remains a home link. Direct CTU and FEL links sit below the introduction. Do not add a second introductory section or extra marketing copy. The video is a click-to-load YouTube embed, preserving the current poster until interaction.
+
+Every route ends with the same restrained technical footer: CTU/FEL activity statement, responsible person Ondřej Šponer and his email, internal Home link, direct CTU/FEL links, and YouTube/Instagram links. Use the current white CTU SVG provisionally; its compliance with the university's visual manual remains subject to FEL confirmation.
 
 Scrolling leads into the three open editorial destination rows: Battlebots, Akce and Tým.
 

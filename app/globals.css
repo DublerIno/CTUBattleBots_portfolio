@@ -321,6 +321,47 @@ a {
   height: auto;
 }
 
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  color: var(--ink);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: rgba(238, 232, 220, 0.1);
+  color: var(--ink-bright);
+}
+
+.social-links svg {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+}
+
+.desktop-social-links {
+  width: 50%;
+  height: 2.25rem;
+  margin-left: 50%;
+  border: 1px solid var(--rule);
+  border-top: 0;
+  background: var(--mat-panel);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.desktop-social-links a { flex: 1; }
+.desktop-social-links a + a { border-left: 1px solid var(--rule-soft); }
+.desktop-social-links a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
 .site-nav-mobile {
   display: none;
 }
@@ -421,6 +462,20 @@ a {
   padding: clamp(14rem, 22vh, 18rem) clamp(3.5rem, 5.5vw, 6rem) 6rem;
 }
 
+.hero-ctu-mark {
+  position: absolute;
+  top: clamp(5rem, 10vh, 7rem);
+  right: clamp(3.5rem, 5.5vw, 6rem);
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.hero-ctu-mark img { display: block; width: 100%; height: 100%; }
+.hero-ctu-mark:hover,
+.hero-ctu-mark:focus-visible { opacity: 0.78; transform: translateY(-2px); }
+
 .battlebots-hero-copy {
   min-width: 0;
   z-index: 1;
@@ -445,6 +500,56 @@ a {
   margin: 2.25rem 0 0;
   font: 500 clamp(0.82rem, 1.18vw, 1.08rem)/1.58 var(--font-technical-family);
 }
+
+.hero-institution-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 1.25rem;
+  font: 500 0.7rem/1.5 var(--font-technical-family);
+  letter-spacing: 0.09em;
+}
+
+.hero-institution-links a {
+  padding-bottom: 0.22rem;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.hero-institution-links a:hover,
+.hero-institution-links a:focus-visible { border-color: var(--ink-bright); color: var(--ink-bright); }
+
+.site-footer {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  margin: 0 clamp(3.5rem, 5.5vw, 6rem);
+  padding: 2.5rem 0 4rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-muted);
+  font: 500 clamp(0.7rem, 0.85vw, 0.85rem)/1.65 var(--font-technical-family);
+}
+
+.footer-heading {
+  display: block;
+  margin-bottom: 0.9rem;
+  color: var(--ink);
+  font: 600 0.72rem/1.2 var(--font-technical-family);
+  letter-spacing: 0.09em;
+}
+
+.footer-identity p { max-width: 21rem; margin: 0; }
+.footer-contact { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-contact a { margin-top: 0.2rem; border-bottom: 1px solid var(--rule); }
+.site-footer a:hover,
+.site-footer a:focus-visible { color: var(--ink-bright); }
+.footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 1.35rem; }
+.footer-links nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+.footer-links nav a { border-bottom: 1px solid var(--rule); }
+.footer-social-links { gap: 0.3rem; }
+.footer-social-links a { min-height: 2.5rem; padding: 0 0.6rem; border: 1px solid var(--rule-soft); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
 .scroll-cue {
   position: absolute;
@@ -1443,12 +1548,21 @@ a {
     padding-inline: 1rem;
   }
 
+  .mobile-social-links { border-top: 1px solid var(--rule); }
+  .mobile-social-links a { min-height: 3.5rem; flex: 1; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .mobile-social-links a + a { border-left: 1px solid var(--rule-soft); }
+
   .battlebots-hero {
     grid-template-columns: 1fr;
     gap: 3rem;
-    padding-top: 10rem;
+    padding-top: 14rem;
     padding-bottom: 7rem;
   }
+
+  .hero-ctu-mark { top: 2rem; right: var(--page-gutter); }
+
+  .site-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-inline: var(--page-gutter); }
+  .footer-links { grid-column: 1 / -1; }
 
   .battlebots-title {
     font-size: clamp(5rem, 12.5vw, 8rem);
@@ -1565,8 +1679,13 @@ a {
     min-height: 100svh;
     align-content: center;
     gap: clamp(1.35rem, 3vh, 2rem);
-    padding: 7.5rem var(--page-gutter) 3.2rem;
+    padding: 17rem var(--page-gutter) 3.2rem;
   }
+
+  .hero-ctu-mark { top: 6.5rem; width: 9.375rem; height: 9.375rem; }
+  .hero-institution-links { margin-top: 1rem; font-size: 0.68rem; }
+  .site-footer { grid-template-columns: 1fr; gap: 1.8rem; padding: 2rem 0 3rem; }
+  .footer-links { grid-column: auto; }
 
   .home-destinations {
     min-height: auto;

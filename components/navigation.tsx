@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { TransitionLink } from "@/components/page-transition";
+import { SocialLinks } from "@/components/social-links";
 
 const items = [
   { href: "/battlebots", label: "BATTLEBOTS" },
@@ -118,6 +119,7 @@ export function Navigation() {
           </div>
           <CtuLogo />
         </div>
+        <SocialLinks className="desktop-social-links" />
       </nav>
 
       <nav
@@ -149,6 +151,7 @@ export function Navigation() {
           <div className="nav-list">
             <NavigationItems onNavigate={() => setMenuState({ open: false, pathname })} />
           </div>
+          <SocialLinks className="mobile-social-links" />
         </div>
       </nav>
     </>
