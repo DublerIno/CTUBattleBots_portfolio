@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ctuUrl, felUrl } from "@/lib/site-links";
 
-const videoId = "buM0eAWilNI";
+const videoId = "9jV3kjrHPvQ";
 
 export function BattlebotsHero() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -34,7 +34,7 @@ export function BattlebotsHero() {
         {isPlaying ? (
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
-            title="Ukázkové video týmu Overengineered a robota MELTY / 01"
+            title="Meet Melty! Antweight Battlebot — Overengineered CTU FEE"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -47,8 +47,8 @@ export function BattlebotsHero() {
             aria-label="Přehrát video týmu Overengineered na YouTube"
           >
             <Image
-              src={`${assetBasePath}/melty-showcase-poster.webp`}
-              alt="Robot MELTY v ukázkovém videu týmu Overengineered"
+              src={`${assetBasePath}/melty-youtube-thumbnail.jpg`}
+              alt="Původní náhled videa Meet Melty! z YouTube kanálu Overengineered"
               fill
               priority
               sizes="(max-width: 960px) 100vw, 47vw"
